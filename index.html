@@ -1,43 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Escolha aleatoria</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Escolha aleatoria</title>
 
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-   <link rel="stylesheet" href="./style.css">
-   
-</head>
-<body>
-  
-  <div class="container">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
 
-    <h1>Escolha-me</h1>
-  
-    <div class="file-field input-field">
-      <div class="btn blue">
-        <span>Buscar imagens</span>
-        <input type="file" multiple accept="image/*" name='images'/>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-172325085-2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-172325085-2");
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Escolha-me</h1>
+
+      <div class="file-field input-field">
+        <div class="btn blue">
+          <span>Buscar imagens</span>
+          <input type="file" multiple accept="image/*" name="images" />
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text" />
+        </div>
       </div>
-      <div class="file-path-wrapper">
-        <input class="file-path validate" type="text">
+
+      <div id="image__content">
+        <div id="image__preview" role="img"></div>
+        <div id="image__content__actions">
+          <button
+            type="button"
+            class="waves-effect waves-light btn-large"
+            id="button__start"
+          >
+            Iniciar
+          </button>
+          <button
+            type="button"
+            class="waves-effect waves-light btn-large red"
+            id="button__stop"
+          >
+            Parar
+          </button>
+        </div>
       </div>
+
+      <div id="images-removed__contianer"></div>
     </div>
-
-  <div id="image__content">
-    <div id='image__preview' role='img'></div>
-    <div id='image__content__actions'>
-      <button type='button' class='waves-effect waves-light btn-large' id='button__start'>Iniciar</button>
-      <button type='button' class='waves-effect waves-light btn-large red' id='button__stop'>Parar</button>
-    </div>
-  </div>
-
-  <div id='images-removed__contianer'></div>
-
-</div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="./script.js"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
 </html>
